@@ -6,6 +6,10 @@ form.addEventListener("submit", calculateResults);
  output.style.display="none";
 const loader=document.querySelector("#loader");
  loader.style.display="none";
+ loader.style.width="260px";
+ loader.style.height="200px";
+ loader.style.margin="0px 0px 0px 180px";
+
 
  const err=document.querySelector(".error");
 err.style.display="none";
@@ -37,6 +41,7 @@ function calculateResults(e) {
     totalInterest.value = (monthly * calculatedPayments - principal).toFixed(2);
     loader.style.display="block";
     err.style.display="none";
+    output.style.display="none";
     function setTime(){
       loader.style.display="none";
       output.style.display="block";
@@ -46,7 +51,6 @@ function calculateResults(e) {
   } else {
    err.style.display="block";
    output.style.display="none";
-
   }
 
   e.preventDefault();
