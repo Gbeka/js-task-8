@@ -6,9 +6,12 @@ form.addEventListener("submit", calculateResults);
  output.style.display="none";
 const loader=document.querySelector("#loader");
  loader.style.display="none";
- loader.style.width="260px";
- loader.style.height="200px";
- loader.style.margin="0px 0px 0px 180px";
+ loader.style.position="relative";
+
+ const img=document.querySelector("img");
+ img.style.textAlign="center";
+ img.style.width="160px";
+ img.style.height="200px";
 
 
  const err=document.querySelector(".error");
@@ -17,6 +20,7 @@ err.style.backgroundColor="blueviolet";
 err.style.height="40px";
 err.style.textAlign="center";
 err.style.fontSize="20px";
+
 
 
 function calculateResults(e) {
